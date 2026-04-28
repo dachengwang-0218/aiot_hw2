@@ -4,7 +4,14 @@
 
 ![網站展示](作業截圖/網站展示.png?v=2)
 
+## 🚀 線上 Demo / Live Demo
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://aiothw2-5gffsgkmijhmiysvjtagui.streamlit.app/)
+
+👉 **[https://aiothw2-5gffsgkmijhmiysvjtagui.streamlit.app/](https://aiothw2-5gffsgkmijhmiysvjtagui.streamlit.app/)**
+
 ---
+
 
 ## 專案結構 Project Structure
 
