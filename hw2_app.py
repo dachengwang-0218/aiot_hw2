@@ -297,7 +297,7 @@ def get_region_data(df, area):
     agg = (sub.groupby("dataDate",as_index=False)
               .agg(mint=("mint","mean"),maxt=("maxt","mean")).round(1))
     agg["dataDate"] = pd.to_datetime(agg["dataDate"])
-    return agg
+    return agg.head(7)  # 只取前 7 天
 
 def wx_label(t):
     if t>=35: return "酷暑 🌡"
