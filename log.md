@@ -228,3 +228,178 @@ which python3                     # 查看路徑
 # 安裝套件至指定 Python
 /path/to/target/python3 -m pip install <package>
 ```
+
+---
+
+## 對話 4 — 美化 Streamlit 網站（Premium Dark Edition）
+
+### USER 需求
+
+大幅美化 `hw2_app.py`，提升視覺質感。
+
+### AI 執行動作
+
+全面重寫 CSS 設計層，升級項目：
+
+| 項目 | 升級內容 |
+|------|---------|
+| 背景 | 動態深藍漸層 + 固定附著背景 |
+| Header | 浮動天氣圖示動畫 + 漸層標題文字 + 即時時鐘 + Live 綠點 |
+| 卡片 | Glassmorphism 玻璃磨砂效果（`backdrop-filter: blur`） |
+| 指標 | 6 張指標卡，頂部彩色漸層線條（冷=藍、熱=橘、天數=綠） |
+| 折線圖 | 新增圖例列 |
+| 資料表 | 新增「溫差」欄位，以 `ProgressColumn` 進度條顯示 |
+| 地圖 | 選中區域加外圈發光暈環，文字加 CSS glow 效果 |
+
+---
+
+## 對話 5 — 推送專案至 GitHub
+
+### USER 需求
+
+將整個專案推送至 `git@github.com:dachengwang-0218/aiot_hw2.git`
+
+### AI 執行動作
+
+1. 建立 `.gitignore`（排除 `data.db`、`__pycache__`、`.DS_Store` 等）
+2. 將 `config.py` 中的真實 API 金鑰替換為 `"YOUR_CWA_API_KEY_HERE"`（防止金鑰外洩）
+3. `git init` → `git add .` → `git commit` → `git remote add origin` → `git push`
+
+### 結果
+
+```
+[main 3419c22] feat: HW2 complete — CWA API fetch, SQLite3 DB, Streamlit dashboard with Folium map
+20 files changed, 1409 insertions(+)
+→ 推送至 https://github.com/dachengwang-0218/aiot_hw2
+```
+
+---
+
+## 對話 6 — 推送新截圖
+
+### USER 需求
+
+新增一張「網站展示.png」截圖，推上 GitHub。
+
+### AI 執行動作
+
+```bash
+git add . && git commit -m "docs: 新增網站展示截圖" && git push
+# → [main 3757260] docs: 新增網站展示截圖
+```
+
+---
+
+## 對話 7 — 極簡幾何 UI 大改版（Refined Geometric Minimalism）
+
+### USER 需求
+
+導入「現代極簡且具備幾何一致性」設計準則：
+- CSS 變數統一設計 Token
+- Space Grotesk + Inter 字體組合
+- 背景網格紋理 + 徑向光暈
+- Glassmorphism 卡片 + 深層陰影
+- 純 CSS hover 微動畫
+- 高對比深色主題
+
+### AI 執行動作
+
+完整重寫 CSS 設計系統：
+
+- `:root {}` 統一管理所有色彩、圓角、陰影 Token
+- `background-image` 疊加 40px 網格線 + 兩個徑向漸層光暈（固定附著）
+- `.card` 統一卡片系統：1px 邊框 + `box-shadow` + hover lift 效果
+- `.mc` 指標卡：頂部 2px 彩色漸層線條
+- `@keyframes fadeUp` 載入動畫 + hover `translateY(-3px)`
+- LIVE badge：綠點閃爍
+- Folium 地圖標記：glow text-shadow
+
+---
+
+## 對話 8 — 尊爵奢華黑金版（Luxury Gold Edition）
+
+### USER 需求
+
+「給我尊爵奢華的版面」
+
+### AI 設計決策
+
+| 維度 | 設計選擇 |
+|------|---------|
+| 主色 | `#050507` 深宇宙黑 + `#D4AF37` 香檳金 |
+| 字體 | `Playfair Display`（歐洲奢侈品牌御用襯線體）+ `Cormorant Garamond` 斜體副標 |
+| 背景 | 48px 金色格線 + 兩個暗金徑向光暈，`background-attachment: fixed` |
+| Hero 頂條 | 金箔漸層光帶 `shimmer` 無限流動動畫 |
+| 分隔線 | 菱形寶石 `◆` + 兩側漸層消散線條（裝飾性分隔） |
+| 指標卡 | 頂部 1.5px 亮金漸層 |
+| 地圖 | 全系列金色調，選中區域 `♦` 圖標 + glow 光暈 |
+| Hover | 卡片上浮 3px + 金色邊框加亮 |
+
+```bash
+git commit -m "style: 尊爵奢華黑金版 UI — Luxury Gold Edition"
+→ 推送至 GitHub
+```
+
+---
+
+## 對話 9 — README 加入網站展示截圖
+
+### USER 需求
+
+將網站展示截圖放入 `README.md`。
+
+### AI 執行動作
+
+在 README 標題下方新增：
+
+```markdown
+## 網站展示 / Preview
+
+![網站展示](作業截圖/網站展示.png)
+```
+
+後續因 GitHub CDN 快取未更新，加入版本參數強制刷新：
+
+```markdown
+![網站展示](作業截圖/網站展示.png?v=2)
+```
+
+---
+
+## 對話 10 — 推送 data.db 至 GitHub
+
+### USER 需求
+
+將 `data.db` 也推上 GitHub。
+
+### AI 執行動作
+
+1. 修改 `.gitignore`，將 `data.db` 的排除規則註解掉
+2. `git add .gitignore data.db`
+3. `git commit -m "feat: 加入 data.db 天氣預報資料庫" && git push`
+
+### 結果
+
+```
+[main 318c3a3] feat: 加入 data.db 天氣預報資料庫
+2 files changed, 2 insertions(+), 2 deletions(-)
+create mode 100644 data.db
+```
+
+---
+
+## Git Commit 歷史摘要
+
+| Commit | 說明 |
+|--------|------|
+| `3419c22` | feat: HW2 complete — 初始專案建立 |
+| `3757260` | docs: 新增網站展示截圖 |
+| `2e9cff0` | style: 尊爵奢華黑金版 UI |
+| `3f854ad` | docs: 在 README 加入網站展示截圖 |
+| `46d5faa` | docs: 更新網站展示截圖 |
+| `870d568` | docs: 強制刷新 README 圖片快取 (v=2) |
+| `318c3a3` | feat: 加入 data.db 天氣預報資料庫 |
+
+---
+
+*最後更新：2026-04-28*
