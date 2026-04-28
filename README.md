@@ -1,5 +1,11 @@
 # HW2 — 臺灣天氣預報系統 / Taiwan Weather Forecast System
 
+## 網站展示 / Preview
+
+![網站展示](作業截圖/網站展示.png)
+
+---
+
 ## 專案結構 Project Structure
 
 ```
